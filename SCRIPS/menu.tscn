@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://j1ceu6hw0b8j"]
+
+[ext_resource type="Script" path="res://SCRIPS/menu.gd" id="1_e2aw3"]
+[ext_resource type="Texture2D" uid="uid://blntaiqngy7qt" path="res://Silent.png" id="2_c0st6"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2aw3")
+
+[node name="ImagenDeWhatsApp2024-11-13ALas20_03_38537a0a32" type="Sprite2D" parent="."]
+position = Vector2(578.5, 324)
+scale = Vector2(0.600521, 0.601852)
+texture = ExtResource("2_c0st6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 431.0
+offset_top = -272.0
+offset_right = 705.0
+offset_bottom = 133.0
+grow_vertical = 0
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "JUGAR
+"
+
+[node name="credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "CREDITOS"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 50
+text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_button_pressed"]

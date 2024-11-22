@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlkgf7dg5fip4"]
+
+[ext_resource type="Texture2D" uid="uid://dvgvsxlh8lpye" path="res://SCENES/ASD/OverWatchDefeat_greenscreen.00_00_03_10.Still002.png" id="1_1h7ga"]
+[ext_resource type="Script" path="res://SCRIPS/button_34.gd" id="2_yq11d"]
+
+[node name="OverWatchDefeatGreenscreen_00000310_still002" type="Sprite2D"]
+position = Vector2(570, 236)
+scale = Vector2(0.484896, 0.361111)
+texture = ExtResource("1_1h7ga")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = -720.0
+offset_top = 523.0
+offset_right = 695.0
+offset_bottom = 809.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "VOLVER A JUGAR"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "SALIR DEL JUEGO"
+script = ExtResource("2_yq11d")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button2" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_pressed"]

@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg536228fhetv"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_aklpw"]
+[ext_resource type="Texture2D" uid="uid://rk5qubwday28" path="res://hq720.jpg" id="2_q3hw1"]
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_aklpw")
+
+[node name="Content" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Problem" type="VBoxContainer" parent="Content"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 1155.0
+offset_bottom = 358.0
+
+[node name="ProblemText" type="Label" parent="Content/Problem"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Pregunta
+¿A qué juego pertenece este código?
+(Fast Inverse Square Root)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Content/Problem"]
+custom_minimum_size = Vector2(0, 210)
+layout_mode = 2
+
+[node name="ProblemImage" type="TextureRect" parent="Content/Problem/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 225.0
+offset_top = 4.0
+offset_right = -243.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_q3hw1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sections" type="VBoxContainer" parent="Content"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 363.0
+offset_right = 1152.0
+offset_bottom = 645.0
+
+[node name="Button" type="Button" parent="Content/Sections"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "League of legends"
+
+[node name="Button2" type="Button" parent="Content/Sections"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Tetris"
+
+[node name="Button3" type="Button" parent="Content/Sections"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Minecraft"
+
+[node name="Button4" type="Button" parent="Content/Sections"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quake III"
